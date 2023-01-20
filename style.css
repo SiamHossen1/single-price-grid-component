@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root{
+    --clr-Cyan: hsl(179, 62%, 43%) ;
+    --clr-Bright-Yellow: hsl(71, 73%, 44%);
+    --clr-Bright-Yellow2: hsl(71, 73%, 54%);
+    --clr-Gray: hsl(204, 43%, 93%);
+    --clr-Blue: hsl(218, 22%, 67%);
+
+    --ff-primary: 'Karla', sans-serif;
+
+    --fw-regular: 400;
+    --fw-extra-bold: 700;
+}
+
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--ff-primary);
+    margin: 2.5rem 1.5rem;
+    padding: 0;
+    border: none;
+    outline: none; 
+    background-color: var(--clr-Gray);
+}
+
+.card__container{
+    border-radius: .3rem;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.community__card{
+    background-color: white;
+    padding: 1rem;
+}
+
+.community__card > *{
+    margin-bottom: 1rem;
+}
+
+.community__card h3{
+    color: var(--clr-Cyan);
+}
+
+.community__card  p:nth-child(2){
+    color: var(--clr-Bright-Yellow);
+    font-weight: var(--fw-extra-bold);
+}
+
+.community__card  p:nth-child(3){
+    color: var(--clr-Blue);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.subscription__card{
+    padding: 1rem;
+    background-color: var(--clr-Cyan);
+    color: white;
+}
+
+.subscription__card p:nth-child(2){
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 0.7rem;
+    font-size: 2rem;
+    font-weight: var(--fw-extra-bold);
+}
+
+.subscription__card p:nth-child(2) small{
+    font-size: 1rem;
+    font-weight: var(--fw-regular);
+    color: var(--clr-Gray);
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+.subscription__card p:nth-child(3){
+    color: var(--clr-Gray);
+    margin-bottom: 1.5rem;
+}
+
+.subscription__card button{
+    all: unset;
+    width: 100%;
+    background-color: var(--clr-Bright-Yellow2);
+    padding: 1rem 0;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: .5rem;
+}
+
+.subscription__card button:hover{
+    cursor: pointer;
+}
+
+.whyUs__card{
+    padding: 1rem;
+    background-color: hsl(177, 53%, 56%) ;
+    color: white;
+}
+
+.whyUs__card h3{
+    margin-bottom: 1rem;
+}
+
+.whyUs__card p{
+    color: var(--clr-Gray);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.whyUs__card p:last-child{
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width:976px){
+    .card__container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .community__card,.subscription__card,.whyUs__card{
+        padding: 2.5rem;
+    }
+    .community__card{
+        grid-column: 1/ -1;
+        padding-bottom: 1.5rem;
+    }
+}
